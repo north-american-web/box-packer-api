@@ -1,8 +1,14 @@
 {
-    "name": "laravel/lumen",
-    "description": "The Laravel Lumen Framework.",
-    "keywords": ["framework", "laravel", "lumen"],
+    "name": "nawebco/box-packer-api",
+    "description": "A Box Packing API",
+    "keywords": ["bin-packing", "packing", "box-packing", "api"],
     "license": "MIT",
+    "authors": [
+        {
+            "name": "David Kidd",
+            "role": "Developer"
+        }
+    ],
     "type": "project",
     "require": {
         "php": ">=7.1.3",
