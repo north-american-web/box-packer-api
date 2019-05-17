@@ -6,7 +6,8 @@ Provides a very simple API interface for North American Web's
 Currently there's only one endpoint available: /v1/packing_attempt. It only accepts POST requests including box and item
 specifications. 
 
-####Requests
+## Requests
+
 Here are the posted data validation rules, for those who speak Lumen (or Laravel).
 ~~~~
 'boxes' => 'required|array',
@@ -58,7 +59,8 @@ fetch(API_URL, {
 ~~~~
 
 
-####Responses
+## Responses
+
 /v1/packing_attempt will return a JSON string representation of an object having to following scheme:
 
 ~~~~
