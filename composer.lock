@@ -1530,16 +1530,16 @@
         },
         {
             "name": "nawebco/box-packer",
-            "version": "2.0.1",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/north-american-web/box-packer.git",
-                "reference": "c1dc5c129bb9fa3f8de0791b15224c1968bc12be"
+                "reference": "9344bfd381fd26219f1cda188969291394fb604c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/north-american-web/box-packer/zipball/c1dc5c129bb9fa3f8de0791b15224c1968bc12be",
-                "reference": "c1dc5c129bb9fa3f8de0791b15224c1968bc12be",
+                "url": "https://api.github.com/repos/north-american-web/box-packer/zipball/9344bfd381fd26219f1cda188969291394fb604c",
+                "reference": "9344bfd381fd26219f1cda188969291394fb604c",
                 "shasum": ""
             },
             "require": {
@@ -1566,7 +1566,7 @@
                 }
             ],
             "description": "Yet another solution to the packing/knapsack problem.",
-            "time": "2019-05-20T22:08:26+00:00"
+            "time": "2019-05-21T06:23:14+00:00"
         },
         {
             "name": "nesbot/carbon",

@@ -16,7 +16,7 @@ use Illuminate\Http\Request;
 use NAWebCo\BoxPacker\Packer;
 
 $router->get('/', function () use ($router) {
-    return 'Documentation: <a href="https://github.com/north-american-web/box-packer-api">https://github.com/north-american-web/box-packer-api</a>';
+    return '<!DOCTYPE html><p>Documentation: <a href="https://github.com/north-american-web/box-packer-api">https://github.com/north-american-web/box-packer-api</a></p>';
 });
 
 $router->post('/v1/packing_attempt', 'Controller@packing_attempt');
