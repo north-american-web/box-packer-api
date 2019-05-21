@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b03ed8da6aa8bb1acca5a6ea80f34845",
+    "content-hash": "24e3bd6fd73069cfa29224415850a420",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -1530,16 +1530,16 @@
         },
         {
             "name": "nawebco/box-packer",
-            "version": "1.2.1",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/north-american-web/box-packer.git",
-                "reference": "62a8950ba461851b6138e4494aff1a4ec2fbd301"
+                "reference": "c1dc5c129bb9fa3f8de0791b15224c1968bc12be"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/north-american-web/box-packer/zipball/62a8950ba461851b6138e4494aff1a4ec2fbd301",
-                "reference": "62a8950ba461851b6138e4494aff1a4ec2fbd301",
+                "url": "https://api.github.com/repos/north-american-web/box-packer/zipball/c1dc5c129bb9fa3f8de0791b15224c1968bc12be",
+                "reference": "c1dc5c129bb9fa3f8de0791b15224c1968bc12be",
                 "shasum": ""
             },
             "require": {
@@ -1566,7 +1566,7 @@
                 }
             ],
             "description": "Yet another solution to the packing/knapsack problem.",
-            "time": "2019-05-17T20:38:31+00:00"
+            "time": "2019-05-20T22:08:26+00:00"
         },
         {
             "name": "nesbot/carbon",
