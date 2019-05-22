@@ -13,7 +13,7 @@
     "require": {
         "php": ">=7.1.3",
         "laravel/lumen-framework": "5.8.*",
-        "nawebco/box-packer": "^2.0.0",
+        "nawebco/box-packer": "^2.1.0",
         "vlucas/phpdotenv": "^3.3"
     },
     "require-dev": {

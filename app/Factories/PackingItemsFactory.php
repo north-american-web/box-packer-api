@@ -2,6 +2,7 @@
 
 namespace App\Factories;
 
+use NAWebCo\BoxPacker\GenericPackable;
 use NAWebCo\BoxPacker\Solid;
 use NAWebCo\BoxPacker\Container;
 
@@ -10,34 +11,33 @@ class PackingItemsFactory
 
     /**
      * @param $data
-     * @return Container
+     * @return GenericPackable
      */
     public static function buildContainer($data)
     {
-        return self::buildSolidInterfaceObject($data, Container::class);
+        return self::buildGenericPackable($data);
     }
 
     /**
      * @param $data
-     * @return Solid
+     * @return GenericPackable
      */
     public static function buildSolid($data)
     {
-        return self::buildSolidInterfaceObject($data, Solid::class);
+        return self::buildGenericPackable($data);
     }
 
     /**
      * @param $data
-     * @param $class
-     * @return \NAWebCo\BoxPacker\SolidInterface
+     * @return GenericPackable
      */
-    protected static function buildSolidInterfaceObject( $data, $class )
+    protected static function buildGenericPackable($data )
     {
         $width = isset($data['width']) ? (float) $data['width'] : 0.0;
         $length =  isset($data['length']) ? (float) $data['length'] : 0.0;
         $height = isset($data['height']) ? (float) $data['height'] : 0.0;
         $description = isset($data['description']) ? $data['description'] : null;
 
-        return new $class($width, $length, $height, $description);
+        return new GenericPackable($width, $length, $height, $description);
     }
 }

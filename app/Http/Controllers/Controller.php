@@ -45,12 +45,14 @@ class Controller extends BaseController
             ]);
         }
 
-        return response()->json([
+        $responseData = [
             'success' => $result->success(),
             'packed' => $this->normalizeBoxData($result->getPackedBoxes(true)),
             'empty' => $this->normalizeBoxData($result->getEmptyBoxes(true)),
-            'leftOverItems' => $result->getNotPackedItems()
-        ]);
+            'leftOverItems' => $this->jsonSerializeArrayElements($result->getNotPackedItems())
+        ];
+
+        return response()->json($responseData);
     }
 
     protected function normalizeBoxData($boxesData)
@@ -58,12 +60,17 @@ class Controller extends BaseController
         $normalized = [];
 
         foreach( $boxesData as $boxData ){
-            $normalizedBoxData = $boxData['box']->toArray();
-            $normalizedBoxData['contents'] = $boxData['contents'];
+            $normalizedBoxData = $boxData['box']->jsonSerialize();
+            $normalizedBoxData['contents'] = $this->jsonSerializeArrayElements($boxData['contents']);
             $normalized[] = $normalizedBoxData;
         }
 
         return $normalized;
+    }
+
+    protected function jsonSerializeArrayElements($arr)
+    {
+        return array_map(function($item){ return $item->jsonSerialize(); }, $arr);
     }
 
 }
