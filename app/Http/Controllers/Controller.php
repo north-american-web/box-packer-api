@@ -39,38 +39,17 @@ class Controller extends BaseController
         try {
             $result = $packer->pack();
         } catch( \Exception $e){
-            return response()->json([
+            return [
                 'success' => false,
                 'message' => $e->getMessage()
-            ]);
+            ];
         }
 
-        $responseData = [
+        return [
             'success' => $result->success(),
-            'packed' => $this->normalizeBoxData($result->getPackedBoxes(true)),
-            'empty' => $this->normalizeBoxData($result->getEmptyBoxes(true)),
-            'leftOverItems' => $this->jsonSerializeArrayElements($result->getNotPackedItems())
+            'packed' => $result->getPackedBoxes(true),
+            'empty' => $result->getEmptyBoxes(true),
+            'leftOverItems' => $result->getNotPackedItems()
         ];
-
-        return response()->json($responseData);
     }
-
-    protected function normalizeBoxData($boxesData)
-    {
-        $normalized = [];
-
-        foreach( $boxesData as $boxData ){
-            $normalizedBoxData = $boxData['box']->jsonSerialize();
-            $normalizedBoxData['contents'] = $this->jsonSerializeArrayElements($boxData['contents']);
-            $normalized[] = $normalizedBoxData;
-        }
-
-        return $normalized;
-    }
-
-    protected function jsonSerializeArrayElements($arr)
-    {
-        return array_map(function($item){ return $item->jsonSerialize(); }, $arr);
-    }
-
 }
