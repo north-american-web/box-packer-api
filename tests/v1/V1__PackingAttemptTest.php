@@ -1,9 +1,8 @@
 <?php
 
-use Laravel\Lumen\Testing\DatabaseMigrations;
-use Laravel\Lumen\Testing\DatabaseTransactions;
+namespace V1;
 
-class PackingAttemptTest extends TestCase
+class PackingAttemptTest extends \TestCase
 {
     /**
      * @return void
@@ -67,7 +66,7 @@ class PackingAttemptTest extends TestCase
                 ]
             ]
         ])->seeJson([
-            'success' => false ]
+                'success' => false]
         )->seeJsonStructure([
             'success',
             'packed',

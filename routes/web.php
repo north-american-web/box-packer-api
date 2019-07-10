@@ -18,3 +18,5 @@ $router->get('/', function () {
 });
 
 $router->post('/v1/packing_attempt', 'Controller@packing_attempt');
+
+$router->get('/v1.1/packing_attempt', 'Controller@packing_attempt');
