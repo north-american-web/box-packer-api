@@ -15,7 +15,7 @@ use App\Factories\PackingItemsFactory;
 use Illuminate\Http\Request;
 use NAWebCo\BoxPacker\Packer;
 
-$router->get('/', function () use ($router) {
+$router->get('/', function () {
     return '<!DOCTYPE html>
 <title>Box Packer API - North American Web Company</title>
 <p>Documentation: <a href="https://github.com/north-american-web/box-packer-api">https://github.com/north-american-web/box-packer-api</a></p>';
