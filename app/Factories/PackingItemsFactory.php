@@ -31,11 +31,11 @@ class PackingItemsFactory
      * @param $data
      * @return GenericPackable
      */
-    protected static function buildGenericPackable($data )
+    protected static function buildGenericPackable($data)
     {
-        $width = isset($data['width']) ? (float) $data['width'] : 0.0;
-        $length =  isset($data['length']) ? (float) $data['length'] : 0.0;
-        $height = isset($data['height']) ? (float) $data['height'] : 0.0;
+        $width = isset($data['width']) ? (float)$data['width'] : 0.0;
+        $length = isset($data['length']) ? (float)$data['length'] : 0.0;
+        $height = isset($data['height']) ? (float)$data['height'] : 0.0;
         $description = isset($data['description']) ? $data['description'] : null;
 
         return new GenericPackable($width, $length, $height, $description);
